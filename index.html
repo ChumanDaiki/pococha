@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>pococha時給計算</title>
+
+  <link rel="stylesheet" href="css\indexstyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <img class="header-logo" src="img/logo.png" alt="logo">
+    <p class="about-site">このサイトはライブ配信アプリのライバーの為に作られたサイトです。<br>pocochaの時間ダイヤの計算ができます。</p>
+  </header>
+
+  <main>
+    <div class="menu">
+      <div class="menu-items">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="liver.html">LIVER'S</a></li>
+        </ul>
+      </div>
+    </div>
+    <select name="rank" id="rank-select">
+      <option value="">ランクを選択</option>
+      <option value="E">E</option>
+      <option value="D">D</option>
+      <option value="C">C</option>
+      <option value="B">B</option>
+      <option value="A">A</option>
+      <option value="S">S</option>
+    </select>
+    <select name="rank-number" id="rankNumber">
+      <option value="">選択してください</option>
+    </select>
+    <p class="day">配信時間
+      <input id="time-input" type="number" value="0" min="0">
+    </p>
+    <input id="calc" type="submit" value="計算">
+    <input id="result" type="text" placeholder="値を入力して計算を押してください" readonly>
+
+    <div class="popup-modal-wrapper" id="popup-modal">
+      <div class="modal">
+        <div>
+          <i class="fa fa-2x fa-times" id="close-modal"></i>
+        </div>
+        <div id="popup-form">
+          <h2 id="q">超過時間はありましたか？</h2>
+          <p>日当たり4時間</p>
+          <p>週当たり19時間</p>
+          <p>月当たり75時間</p>
+          <p>までしか時間ダイヤはもらえません。</p>
+          <p>※超過がない場合は「0」を入力してください。</p>
+          <input id="over-time" type="number" value="0" min="0">
+          <input id="time-button" type="submit" value="計算">
+        </div>
+      </div>
+    </div>
+    
+    
+  </main>
+  <script src="script.js"></script>
+
+
+</body>
+</html>
